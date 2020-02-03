@@ -1,0 +1,151 @@
+@import 'variables';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+// Type
+@font-face {
+    font-family: "everett_medium";
+    src: url('../fonts/EverettTrial-Medium-web.woff') format('woff');
+    font-family: "everett_regular";
+    src: url('../fonts/EverettTrial-Regular-web.woff') format('woff');
+}
+
+body {
+  font-family: everett_regular;
+  font-size: $font-small;
+  color: $dark-color;
+  background: $burnt-orange-color;
+}
+
+.main-content {
+  background: $tan-color;
+  color: $dark-color;
+}
+
+
+// LAYOUT
+.layout-margin {
+  padding: $layout-margin;
+}
+.grid-parent {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat($grid-columns,1fr);
+  width: 100%;
+  justify-items: start;
+  align-content: start;
+  grid-row-gap: $grid-gutters;
+}
+
+.grid-item {
+  grid-column-end: auto;
+  grid-column-start: auto;
+  object-fit: cover;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+// MOBILE
+@for $i from 1 through $grid-columns {
+  .grid-start-#{$i} {
+    grid-column-start: $i;
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .grid-span-#{$i} {
+    grid-column-end: span #{$i};
+  }
+}
+
+
+// DESKTOP
+@media all and (min-width: 600px) {
+  @for $i from 1 through $grid-columns {
+    .desktop-grid-start-#{$i} {
+      grid-column-start: $i;
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .desktop-grid-span-#{$i} {
+      grid-column-end: span #{$i};
+    }
+  }
+}
+
+
+// HUGE
+@media all and (min-width: 1300px) {
+  @for $i from 1 through $grid-columns {
+    .huge-grid-start-#{$i} {
+      grid-column-start: $i;
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .huge-grid-span-#{$i} {
+      grid-column-end: span #{$i};
+    }
+  }
+}
+
+
+
+
+// TYPE
+p {
+  margin:0 0 $base-spacing/2;
+}
+h1,h2,h3,h4,h5 {
+  margin: 0 0 $base-spacing;
+}
+
+.font-small {
+  font-size: $font-small;
+}
+.font-medium {
+  font-size: $font-medium;
+}
+.font-large {
+  font-size: $font-large;
+}
+.font-huge {
+  font-size: $font-huge;
+}
+
+
+// HELPERS
+.mobile-not {
+  @media all and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.padding-right {
+  padding-right: $base-spacing/2;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background: $tan-color;
+}
+
+.w100 {
+  width: 100%;
+  height: auto;
+}
+
+.mb1 {
+  margin-bottom: $base-spacing;
+}

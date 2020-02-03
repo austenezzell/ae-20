@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Austen – Example</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+
+<body>
+  <div id="example-page">
+
+    <!-- NAV -->
+    <nav>
+      <div class="grid-parent layout-margin">
+        <div class="grid-item grid-start-1 grid-span-4">
+          <a class="active" href="/">Home Page</a>
+        </div>
+        <div class="grid-item grid-start-5 grid-span-4">
+          <a href="/example.html">Example Page</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <section>
+      <div class="layout-margin grid-parent">
+        <div class="grid-item grid-start-1 grid-span-16">
+          <h1>Another page.</h1>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+
+  <script defer src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+
+</html>
