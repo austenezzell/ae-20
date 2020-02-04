@@ -2,15 +2,56 @@ import 'normalize.css';
 import './styles/style.scss';
 
 let homepage = document.getElementById('homepage');
+let gogoroPage = document.getElementById('gogoro-page');
 let examplePage = document.getElementById('example-page');
 import mags from '../src/img/mags.png';
 import clouds from "../src/img/sky_2.mp4";
 import hank from "../src/img/hank.mp4";
 import cinco from "../src/img/cinco.mp4";
 
+import gogoro1 from "../src/img/gogoro_dtl_1.jpg";
+import gogoro2 from "../src/img/gogoro_dtl_2.jpg";
+import gogoro3 from "../src/img/gogoro_dtl_3.png";
+import gogoro4 from "../src/img/gogoro_dtl_4.jpg";
+import gogoro5 from "../src/img/gogoro_dtl_5.jpg";
+import gogoro6 from "../src/img/gogoro_dtl_6.jpg";
+import gogoro7 from "../src/img/gogoro_dtl_7.mp4";
+import gogoro8 from "../src/img/gogoro_dtl_8.jpg";
+import gogoro9 from "../src/img/gogoro_dtl_9.jpg";
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  if (gogoroPage) {
+
+    let gogoroWork = [gogoro1, gogoro2, gogoro3, gogoro4, gogoro5, gogoro6, gogoro7, gogoro8, gogoro9];
+    let workImages = document.querySelectorAll('.work-images');
+
+
+
+    for (var i = 0; i < gogoroWork.length; i++) {
+
+      if (gogoroWork[i].endsWith(".mp4")) {
+        let video = document.createElement("video");
+        video.src = gogoroWork[i];
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.setAttribute('class','work-dtl');
+        workImages[0].appendChild(video);
+      } else {
+        let img = document.createElement("img");
+        img.src = gogoroWork[i];
+        img.setAttribute('class','work-dtl');
+        workImages[0].appendChild(img);
+      }
+
+    }
+
+
+  };
 
 
   if (homepage) {
@@ -26,8 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial starting place
     location.hash = "hi";
-
-
 
     const portfolioSection = document.querySelectorAll('.portfolio-section');
 
@@ -57,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-
 
     const me = document.querySelector('.me');
     const hoverFamily = document.querySelector('.bio-images');

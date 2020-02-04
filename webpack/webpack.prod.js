@@ -105,6 +105,12 @@ module.exports = {
       template: './' + src_Path + '/example.html',
       filename: 'example.html'
     }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/gogoro.html',
+      filename: 'gogoro.html'
+    }),
     new WebpackMd5Hash()
   ]
 };

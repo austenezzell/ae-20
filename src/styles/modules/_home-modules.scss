@@ -1,0 +1,114 @@
+// HOME MODULES
+
+
+.tjb {
+  .grid-item-1 {
+    grid-column: 1 / 9;
+    grid-row: 1/9;
+    background: url('../img/j1.jpg');
+    background-position: center;
+    background-size: cover;
+    @media all and (max-width: 600px) {
+      grid-column: 1 / 17;
+    }
+  }
+  .grid-item-2 {
+    grid-column: 9 / 17;
+    grid-row: 1/9;
+    background: url('../img/j2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.gogoro {
+  .grid-item-1 {
+    grid-column: 1 / 9;
+    grid-row: 1/9;
+    background: url('../img/gogoro_1.jpg');
+    background-position: center;
+    background-size: cover;
+    @media all and (max-width: 600px) {
+      grid-column: 1 / 17;
+    }
+  }
+  .grid-item-2 {
+    grid-column: 9 / 17;
+    grid-row: 1/9;
+    background: url('../img/gogoro_2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.indigo {
+  .grid-item-1 {
+    grid-column: 1 / 9;
+    grid-row: 1/9;
+    background: url('../img/water.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .grid-item-2 {
+    grid-column: 3 / 9;
+    grid-row: 3/9;
+    background: url('../img/eyes.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .grid-item-3 {
+    grid-column: 9 / 17;
+    grid-row: 1/9;
+    overflow: hidden;
+    .video {
+      video {
+        width: auto;
+        height: 100%;
+      }
+    }
+    @media all and (max-width: 600px) {
+      grid-column: 1 / 17;
+    }
+  }
+  .grid-item-4 {
+    grid-column: 11 / 15;
+    grid-row: 3/7;
+    z-index: 1;
+    background: url('../img/back.jpg');
+    background-position: center;
+    background-size: cover;
+    @media all and (max-width: 600px) {
+      grid-column: 4 / 14;
+    }
+  }
+}
+
+
+.hanour {
+  background: white;
+  .bg-grid-parent {
+    overflow-x: hidden;
+  }
+  .grid-item-1 {
+    grid-column: 1/16;
+    grid-row: 1/9;
+    align-self: stretch;
+    justify-self: center;
+    overflow: hidden;
+    video {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .grid-item-2 {
+    grid-column: 7 / 11;
+    grid-row: 2/7;
+    background: url('../img/hanour.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    @media all and (max-width: 1000px) {
+      grid-column: 4 / 14;
+    }
+  }
+}

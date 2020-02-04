@@ -88,6 +88,12 @@ module.exports = {
       hash: false,
       template: './' + src_Path + '/example.html',
       filename: 'example.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: false,
+      template: './' + src_Path + '/gogoro.html',
+      filename: 'gogoro.html'
     })
   ]
 };

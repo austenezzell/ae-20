@@ -1,0 +1,15 @@
+// WORK PAGE
+
+.work-page {
+  background: $tan-color;
+  .project-info {
+    font-size: $font-medium;
+  }
+
+  .work-dtl {
+    line-height: 0;
+    padding: $base-spacing $base-spacing 0;
+    width: 100%;
+    height: auto;
+  }
+}
