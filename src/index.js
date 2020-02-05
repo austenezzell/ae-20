@@ -3,13 +3,13 @@ import './styles/style.scss';
 
 let homepage = document.getElementById('homepage');
 let gogoroPage = document.getElementById('gogoro-page');
-let examplePage = document.getElementById('example-page');
+
+let workPage = document.querySelector('.work-page');
 import mags from '../src/img/mags.png';
 import clouds from "../src/img/sky_2.mp4";
 import hank from "../src/img/hank.mp4";
 import cinco from "../src/img/cinco.mp4";
 
-import gogoro1 from "../src/img/gogoro_dtl_1.jpg";
 import gogoro2 from "../src/img/gogoro_dtl_2.jpg";
 import gogoro3 from "../src/img/gogoro_dtl_3.png";
 import gogoro4 from "../src/img/gogoro_dtl_4.jpg";
@@ -19,43 +19,92 @@ import gogoro7 from "../src/img/gogoro_dtl_7.mp4";
 import gogoro8 from "../src/img/gogoro_dtl_8.jpg";
 import gogoro9 from "../src/img/gogoro_dtl_9.jpg";
 
+import indigo1 from "../src/img/indigo_1.jpg";
+import indigo2 from "../src/img/indigo_2.jpg";
+import indigo3 from "../src/img/indigo_3.jpg";
+import indigo4 from "../src/img/indigo_4.jpg";
+import indigo5 from "../src/img/indigo_5.jpg";
+import indigo6 from "../src/img/indigo_6.jpg";
+import indigo7 from "../src/img/indigo_7.jpg";
+import indigo8 from "../src/img/indigo_8.jpg";
+import indigo9 from "../src/img/indigo_9.jpg";
+
+import hank1 from "../src/img/hank_1.jpg";
+import hank2 from "../src/img/hank_2.jpg";
+import hank3 from "../src/img/hank.mp4";
+
+let tjb1 = "https://player.vimeo.com/external/165183648.hd.mp4?s=4fd0a6759a63a06b250ce6f821e96fc491520051&profile_id=119";
+
+import hanour1 from "../src/img/hanour_1.jpg";
+let hanour2 = "https://player.vimeo.com/external/232087024.sd.mp4?s=ebcdc83df4851bdc81ce8ba07320dd7db7bfa22b&profile_id=165";
+let hanour3 = "https://player.vimeo.com/external/258123440.hd.mp4?s=78db6a34ee1f185ef44094973107d931b6e8e3a9&profile_id=174";
+let hanour4 = "https://player.vimeo.com/external/288994448.sd.mp4?s=a8cf4f50df6992db4d18c5e58ee2c8b6e332480c&profile_id=165";
+
+
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  if (gogoroPage) {
-
-    let gogoroWork = [gogoro1, gogoro2, gogoro3, gogoro4, gogoro5, gogoro6, gogoro7, gogoro8, gogoro9];
+  if (workPage) {
     let workImages = document.querySelectorAll('.work-images');
+    let caseStudy = workPage.id;
 
+    let gogoroWork = [gogoro2, gogoro3, gogoro4, gogoro5, gogoro6, gogoro7, gogoro8, gogoro9];
+    let indigoWork = [indigo1, indigo2, indigo3, indigo4, indigo5, indigo6, indigo7, indigo8, indigo9];
+    let hanourWork = [hanour1, hanour2, hanour3, hanour4];
+    let tjbWork = [tjb1];
+    let hankWork = [hank1, hank2, hank3];
 
-
-    for (var i = 0; i < gogoroWork.length; i++) {
-
-      if (gogoroWork[i].endsWith(".mp4")) {
-        let video = document.createElement("video");
-        video.src = gogoroWork[i];
-        video.autoplay = true;
-        video.muted = true;
-        video.loop = true;
-        video.setAttribute('class','work-dtl');
-        workImages[0].appendChild(video);
-      } else {
-        let img = document.createElement("img");
-        img.src = gogoroWork[i];
-        img.setAttribute('class','work-dtl');
-        workImages[0].appendChild(img);
-      }
-
+    const injectWork = (client) => {
+        for (var i = 0; i < client.length; i++) {
+          if (client[i].endsWith(".jpg") | client[i].endsWith(".png")) {
+            let img = document.createElement("img");
+            img.src = client[i];
+            img.setAttribute('class','work-dtl');
+            workImages[0].appendChild(img);
+          } else {
+            let video = document.createElement("video");
+            video.src = client[i];
+            video.autoplay = true;
+            video.muted = true;
+            video.loop = true;
+            video.setAttribute('class','work-dtl');
+            workImages[0].appendChild(video);
+          }
+        }
     }
 
+    if (caseStudy == 'gogoro-page') {
+      injectWork(gogoroWork);
+    } else if (caseStudy == 'indigo-page') {
+      injectWork(indigoWork);
+    } else if (caseStudy == 'hanour-page') {
+      injectWork(hanourWork);
+    } else if (caseStudy == 'tjb-page') {
+      injectWork(tjbWork);
+    } else if (caseStudy == 'hank-pdx-page') {
+      injectWork(hankWork);
+    }
 
   };
 
 
   if (homepage) {
 
+    const introEl = document.querySelector('.oh-hey');
+
+    if (window.location.search == '?back=true') {
+      introEl.style.display = 'none';
+    } else {
+      // Initial starting place
+      location.hash = "hi";
+      setTimeout(function() {
+        introEl.style.display = 'none';
+      }, 3000);
+    }
+
+    // IMAGES AND VIDEOS
     var cloudsBlock = document.getElementById('clouds');
     cloudsBlock.src = clouds;
 
@@ -65,8 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var cincoBlock = document.getElementById('cinco');
     cincoBlock.src = cinco;
 
-    // Initial starting place
-    location.hash = "hi";
+
 
     const portfolioSection = document.querySelectorAll('.portfolio-section');
 
@@ -113,21 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
     meHover();
     portfolioSectionHover();
 
-
-
-
-
-
-
-
-
-
-
-
   }
 
-  if (examplePage) {
-    console.log('example page. dont forget to add page name and template to webpack dev and production.');
-  }
+
 
 });

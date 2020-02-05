@@ -111,6 +111,36 @@ module.exports = {
       template: './' + src_Path + '/gogoro.html',
       filename: 'gogoro.html'
     }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/indigo.html',
+      filename: 'indigo.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/hank-pdx.html',
+      filename: 'hank-pdx.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/the-james-brand.html',
+      filename: 'the-james-brand.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/hanour.html',
+      filename: 'hanour.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/cinco-design.html',
+      filename: 'cinco-design.html'
+    }),
     new WebpackMd5Hash()
   ]
 };

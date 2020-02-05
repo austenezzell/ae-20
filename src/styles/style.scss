@@ -3,6 +3,31 @@
 @import 'modules/home-modules';
 @import 'modules/work-page';
 
+.oh-hey {
+  background: $burnt-orange-color;
+  color: $tan-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  animation: hide .4s 2.6s forwards;
+  p {
+    font-size: $font-medium;
+  }
+  .in-one {
+    opacity: 0;
+    animation: in-from-left .4s .4s forwards;
+    position: relative;
+  }
+  .in-two {
+    opacity: 0;
+    animation: in-from-left .4s .8s forwards;
+    position: relative;
+  }
+}
+
 .info {
   background: $dark-color;
   color: $tan-color;
@@ -143,14 +168,7 @@ a.portfolio-section {
 
 
 
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 
 .bio-images {
   display: none;

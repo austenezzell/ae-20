@@ -9,10 +9,8 @@
 
 // Type
 @font-face {
-    font-family: "everett_medium";
-    src: url('../fonts/EverettTrial-Medium-web.woff') format('woff');
     font-family: "everett_regular";
-    src: url('../fonts/EverettTrial-Regular-web.woff') format('woff');
+    src: url('../fonts/Everett-Regular-web.woff') format('woff');
 }
 
 body {
@@ -122,6 +120,33 @@ h1,h2,h3,h4,h5 {
   font-size: $font-huge;
 }
 
+// ANIMATION
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes in-from-left {
+  from {
+    opacity: 0;
+    left: - $base-spacing;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
 
 // HELPERS
 .mobile-not {
