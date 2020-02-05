@@ -14,7 +14,10 @@
   z-index: 5;
   animation: hide .4s 2.6s forwards;
   p {
-    font-size: $font-medium;
+    font-size: $font-regular;
+    @media all and (min-width: 600px) {
+      font-size: $font-medium;
+    }
   }
   .in-one {
     opacity: 0;
@@ -25,6 +28,14 @@
     opacity: 0;
     animation: in-from-left .4s .8s forwards;
     position: relative;
+  }
+}
+
+#homepage {
+  opacity: 1;
+  &.out {
+    opacity: 0;
+    animation: hide .4s forwards;
   }
 }
 

@@ -3,6 +3,7 @@ import './styles/style.scss';
 
 let homepage = document.getElementById('homepage');
 let gogoroPage = document.getElementById('gogoro-page');
+const introEl = document.querySelector('.oh-hey');
 
 let workPage = document.querySelector('.work-page');
 import mags from '../src/img/mags.png';
@@ -56,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let tjbWork = [tjb1];
     let hankWork = [hank1, hank2, hank3];
 
+    setTimeout(function() {
+      introEl.style.display = 'none';
+    }, 3000);
+
     const injectWork = (client) => {
         for (var i = 0; i < client.length; i++) {
           if (client[i].endsWith(".jpg") | client[i].endsWith(".png")) {
@@ -92,8 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (homepage) {
 
-    const introEl = document.querySelector('.oh-hey');
-
     if (window.location.search == '?back=true') {
       introEl.style.display = 'none';
     } else {
@@ -102,6 +105,19 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(function() {
         introEl.style.display = 'none';
       }, 3000);
+    }
+
+    let workLink = document.querySelectorAll('.link-to-work');
+
+    for (var i = 0; i < workLink.length; i++) {
+      workLink[i].addEventListener('click',function(e) {
+        e.preventDefault();
+        homepage.classList.add('out');
+        let destination = this.href;
+        setTimeout(function() {
+          window.location = destination;
+        }, 400);
+      });
     }
 
     // IMAGES AND VIDEOS

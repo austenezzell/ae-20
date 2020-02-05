@@ -3,7 +3,10 @@
 .work-page {
   background: $tan-color;
   .project-info {
-    font-size: $font-medium;
+    font-size: $font-regular;
+    @media all and (min-width: 600px) {
+      font-size: $font-medium;
+    }
   }
 
   .work-dtl {
@@ -16,7 +19,6 @@
   .team {
     a {
       color: $dark-color;
-      
     }
     ul {
       margin: 0;
