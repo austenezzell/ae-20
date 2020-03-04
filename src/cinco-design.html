@@ -4,16 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Austen | Cinco Design</title>
+  <title>Austen Ezzell – Cinco Design</title>
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="Austen Ezzell – Interdisciplinary designer and creative director.">
+  <meta name="Description" content="Austen Ezzell – Interdisciplinary designer and creative director."/>
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Austen Ezzell – Interdisciplinary designer and creative director." />
+  <meta property="og:type" content="Portfolio" />
+  <meta property="og:url" content="http://www.austenezzell.com" />
+  <meta property="og:image" content="http://www.austenezzell.com/img/jp_costa.jpg" />
+  <meta property="og:description" content="Austen Ezzell – Interdisciplinary designer and creative director." />
+  <link rel="icon" href="/icon-32x32.png">
+  <link rel="apple-touch-icon" href="/icon-192x192.png">
+  <!-- link to stylesheet -->
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
-  <div id="gogoro-page" class="work-page">
+  <div id="cinco-design-page" class="work-page">
 
 
 
-    <section class="container layout-margin work sticky">
+    <section class="container layout-margin work sticky sticky-mobile">
       <div class="grid-parent header">
         <div class="grid-item grid-start-1 grid-span-8 desktop-grid-start-1 desktop-grid-span-4">
           <a href="/?back=true#cinco-design">Back</a>
@@ -32,23 +44,23 @@
       <div class="layout-margin">
         <div class="grid-parent project-info">
           <div class="grid-item grid-start-1 grid-span-16 desktop-grid-start-1 desktop-grid-span-16">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis perferendis, in deserunt, et laudantium commodi nostrum enim distinctio ullam veritatis cumque fugiat nisi suscipit provident fuga consequuntur beatae optio quo.</p>
+            <p>As Cinco embarked on its next chapter, we worked to clarify our position, update the visual identity and design a new website that would better represent the Cinco brand and the talented people who work there.</p>
           </div>
         </div>
       </div>
 
-      <div class="container layout-margin work sticky">
+      <div class="container layout-margin work">
         <div class="grid-parent">
           <div class="grid-item grid-start-1 grid-span-8 desktop-grid-start-1 desktop-grid-span-4">
             <ul>
-              <li><a href="http://www.hankpdx.com">hankpdx.com</a></li>
+              <li><a href="http://www.cincodesign.com" target="_blank">cincodesign.com</a></li>
             </ul>
           </div>
           <div class=" grid-item grid-start-9 grid-span-16 desktop-grid-start-5 desktop-grid-span-4">
-            <h4 class="padding-right">Website &amp; Positioning</h4>
+            <h4 class="padding-right mpb">Positioning, Visual Identity &amp; Website</h4>
           </div>
           <div class=" grid-item grid-start-9 grid-span-16 desktop-grid-start-9 desktop-grid-span-4">
-            <h4 class="padding-right">My Role – Creative Direction</h4>
+            <h4 class="padding-right mpb">My Role – Creative Direction</h4>
           </div>
           <div class="grid-item grid-start-9 grid-span-16 desktop-grid-start-13 desktop-grid-span-4">
             <p class="padding-right">Cinco – 2019</p>
@@ -117,6 +129,13 @@
   </div>
 
   <script defer src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5W5Z6XK');</script>
+
 </body>
 
 </html>

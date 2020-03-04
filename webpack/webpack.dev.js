@@ -86,12 +86,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: false,
-      template: './' + src_Path + '/example.html',
-      filename: 'example.html'
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: false,
       template: './' + src_Path + '/gogoro.html',
       filename: 'gogoro.html'
     }),
@@ -124,6 +118,24 @@ module.exports = {
       hash: false,
       template: './' + src_Path + '/the-james-brand.html',
       filename: 'the-james-brand.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: false,
+      template: './' + src_Path + '/nextbit.html',
+      filename: 'nextbit.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: false,
+      template: './' + src_Path + '/preso/index.html',
+      filename: 'preso/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: false,
+      template: './' + src_Path + '/preso/background.html',
+      filename: 'preso/background.html'
     })
   ]
 };

@@ -2,6 +2,7 @@
 @import 'modules/ticker';
 @import 'modules/home-modules';
 @import 'modules/work-page';
+@import 'modules/preso';
 
 .oh-hey {
   background: $burnt-orange-color;
@@ -21,13 +22,19 @@
   }
   .in-one {
     opacity: 0;
-    animation: in-from-left .4s .4s forwards;
+    animation: show .4s .4s forwards;
     position: relative;
+    @media all and (min-width: 600px) {
+      animation: in-from-left .4s .4s forwards;
+    }
   }
   .in-two {
     opacity: 0;
-    animation: in-from-left .4s .8s forwards;
+    animation: show .4s .8s forwards;
     position: relative;
+    @media all and (min-width: 600px) {
+      animation: in-from-left .4s .8s forwards;
+    }
   }
 }
 
@@ -129,6 +136,7 @@
 
 a.portfolio-section {
   position: relative;
+  display: block;
   .cursor-follow {
     position: absolute;
     z-index: 3;
@@ -170,6 +178,9 @@ a.portfolio-section {
   grid-template-columns: repeat($grid-columns, 1fr);
   grid-auto-rows: minmax(100px, 1fr);
   line-height: 0;
+  @media all and (min-width: 1600px) {
+    height: 1200px;
+  }
   .grid-item {
     background-position: center;
     background-size: cover;

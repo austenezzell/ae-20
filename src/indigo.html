@@ -4,14 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Austen | Indigo</title>
+  <title>Austen Ezzell – Indigo</title>
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="Austen Ezzell – Interdisciplinary designer and creative director.">
+  <meta name="Description" content="Austen Ezzell – Interdisciplinary designer and creative director."/>
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Austen Ezzell – Interdisciplinary designer and creative director." />
+  <meta property="og:type" content="Portfolio" />
+  <meta property="og:url" content="http://www.austenezzell.com" />
+  <meta property="og:image" content="http://www.austenezzell.com/img/jp_costa.jpg" />
+  <meta property="og:description" content="Austen Ezzell – Interdisciplinary designer and creative director." />
+  <link rel="icon" href="/icon-32x32.png">
+  <link rel="apple-touch-icon" href="/icon-192x192.png">
+  <!-- link to stylesheet -->
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
   <div id="indigo-page" class="work-page">
 
-    <section class="container layout-margin work sticky">
+    <section class="container layout-margin work sticky sticky-mobile">
       <div class="grid-parent header">
         <div class="grid-item grid-start-1 grid-span-8 desktop-grid-start-1 desktop-grid-span-4">
           <a href="/?back=true#indigo">Back</a>
@@ -29,23 +41,23 @@
       <div class="layout-margin">
         <div class="grid-parent project-info">
           <div class="grid-item grid-start-1 grid-span-16 desktop-grid-start-1 desktop-grid-span-16">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, cumque aspernatur! Blanditiis qui reiciendis, pariatur eligendi. Harum quod, modi eaque, id, deserunt praesentium ex sed aut et amet expedita illum.</p>
+            <p>Indigo make marine collagen from deep Icelandic seas. Envoy helped define the brand platform, build the identity and bring the brand direct to their consumer.</p>
           </div>
         </div>
       </div>
 
-      <div class="container layout-margin work sticky">
+      <div class="container layout-margin work">
         <div class="grid-parent">
           <div class="grid-item grid-start-1 grid-span-8 desktop-grid-start-1 desktop-grid-span-4">
             <ul>
-              <li><a href="http://www.indigocollagen.com">Indigo Collagen</a></li>
+              <li><a href="http://www.indigocollagen.com" target="_blank">Indigo Collagen</a></li>
             </ul>
           </div>
           <div class=" grid-item grid-start-9 grid-span-16 desktop-grid-start-5 desktop-grid-span-4">
-            <h4 class="padding-right">Identity, Content &amp; Website</h4>
+            <h4 class="padding-right mpb">Identity, Content &amp; Website</h4>
           </div>
           <div class=" grid-item grid-start-9 grid-span-16 desktop-grid-start-9 desktop-grid-span-4">
-            <h4 class="padding-right">My Role – Creative Direction</h4>
+            <h4 class="padding-right mpb">My Role – Creative Direction</h4>
           </div>
           <div class="grid-item grid-start-9 grid-span-16 desktop-grid-start-13 desktop-grid-span-4">
             <p class="padding-right">Envoy – 2020</p>
@@ -65,9 +77,11 @@
       <div class="team layout-margin">
         <h4>Teams</h4>
         <ul>
-          <li>Art Direction / Design: Jacob Irwin</li>
-          <li>Art Direction / Design: Megan Gray</li>
+          <li>Packaging Design / Visual Identity: <a href="http://www.jacobirwin.com/">Jacob Irwin</a></li>
+          <li>Design / Art Direction: <a href="https://www.houseofgrays.com/">Megan Gray</a></li>
+          <li>Design / Art Dircetion: <a href="https://www.soreniverson.com/"></a>Soren Iverson</li>
           <li>Photography: <a href="http://katborchart.com/">Kat Borchart</a></li>
+          <li>ECD: Ryan Rommelflanger</li>
           <li>The Indigo Team.</li>
         </ul>
       </div>
@@ -119,6 +133,13 @@
 
 
   <script defer src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5W5Z6XK');</script>
+
 </body>
 
 </html>

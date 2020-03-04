@@ -1,7 +1,8 @@
 // // Ticker
 
+$duration: 18s;
+$desktop-duration: 27s;
 
-$duration: 24s;
 
 .ticker {
   animation-iteration-count: infinite;
@@ -11,6 +12,13 @@ $duration: 24s;
   animation-duration: $duration;
   height: 100px;
   white-space: nowrap;
+  p {
+    font-size: $font-large;
+    @media all and (min-width: 600px) {
+      font-size: $font-huge;
+      animation-duration: $desktop-duration;
+    }
+  }
 }
 
 

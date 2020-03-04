@@ -1,0 +1,196 @@
+// PRESO
+
+
+#preso-home {
+  .primary-nav {
+      margin: $base-spacing*4 0;
+      ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        margin-bottom: $base-spacing;
+        a {
+          color: $dark-color;
+          text-decoration: none;
+          font-size: $font-regular;
+          @media all and (min-width: 600px) {
+            font-size: $font-medium;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.preso-nav {
+  a.active {
+    text-decoration: underline;
+  }
+}
+.secondary-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $burnt-orange-color;
+  color: $tan-color;
+  z-index: 10;
+  &.active {
+    display: block;
+  }
+  .work {
+    background: $burnt-orange-color;
+    a, h1, h2, h3, h4, h5, p {
+      color: $tan-color;
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+  ul {
+    margin: $base-spacing 0 0;
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        display: block;
+        color: $tan-color;
+        text-decoration: none;
+        font-size: $font-regular;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.active {
+          text-decoration: underline;
+        }
+        @media all and (min-width: 600px) {
+          font-size: $font-large;
+        }
+      }
+    }
+  }
+}
+
+
+.job {
+  display: block;
+  position: relative;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  .bg-grid-parent {
+    height: 100%;
+    width: 100%;
+  }
+  .title {
+    grid-column: 1 / 17;
+    grid-row: 3/6;
+    font-size: $font-regular;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+    h2 {
+      margin: 0;
+      position: relative;
+      top: 80px;
+    }
+    @media all and (min-width: 600px) {
+      font-size: $font-medium;
+    }
+    @media all and (min-width: 1300px) {
+      font-size: $font-large;
+    }
+  }
+  .image-slide {
+    display: none;
+    z-index: 2;
+  }
+  .three-four {
+    display: none;
+    grid-column: 3 / 15;
+    grid-row: 2/5;
+    @media all and (min-width: 600px) {
+      grid-column: 6 / 12;
+      grid-row: 2/5;
+    }
+    @media all and (min-width: 1200px) {
+      grid-column: 6 / 12;
+      grid-row: 1/6;
+    }
+  }
+  .four-three {
+    grid-column: 1 / 17;
+    grid-row: 3/4;
+    @media all and (min-width: 600px) {
+      grid-column: 4 / 14;
+      grid-row: 2/5;
+    }
+  }
+  .full-bleed {
+    grid-column: 1 / 17;
+    grid-row: 1/6;
+  }
+  .square {
+    grid-column: 1 / 17;
+    grid-row: 2/5;
+    @media all and (min-width: 600px) {
+      grid-column: 6 / 12;
+      grid-row: 2/5;
+    }
+    @media all and (min-width: 1200px) {
+      grid-column: 5 / 13;
+      grid-row: 2/5;
+    }
+  }
+}
+
+
+
+.background {
+  .grid-item-2 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/bg1.jpg');
+  }
+  .grid-item-3 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/bg2.jpg');
+  }
+  .grid-item-4 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/bg3.jpg');
+  }
+}
+
+.quik {
+  .grid-item-2 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/quik1.jpg');
+  }
+  .grid-item-3 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/quik2.jpg');
+  }
+  .grid-item-4 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/quik3.png');
+  }
+}
+
+.grid-item.active {
+  display: block;
+}

@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+::selection { background: $burnt-orange-color; }
 
 // Type
 @font-face {
@@ -105,6 +106,7 @@ p {
 }
 h1,h2,h3,h4,h5 {
   margin: 0 0 $base-spacing;
+  font-weight: inherit;
 }
 
 .font-small {
@@ -154,7 +156,12 @@ h1,h2,h3,h4,h5 {
     display: none;
   }
 }
-
+.mpb {
+  padding-bottom: $base-spacing/2;
+  @media all and (min-width: 600px) {
+    padding-bottom: 0;
+  }
+}
 .padding-right {
   padding-right: $base-spacing/2;
 }
@@ -169,6 +176,10 @@ h1,h2,h3,h4,h5 {
   }
 }
 
+.sticky-mobile {
+  position: sticky;
+}
+
 .w100 {
   width: 100%;
   height: auto;
@@ -176,4 +187,12 @@ h1,h2,h3,h4,h5 {
 
 .mb1 {
   margin-bottom: $base-spacing;
+}
+.min-100 {
+  min-height: 100Vh;
+  position: relative;
+}
+.vh-80 {
+  height: 80vh;
+  align-items: center;
 }
