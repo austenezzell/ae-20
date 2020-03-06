@@ -152,7 +152,13 @@ module.exports = {
       hash: true,
       template: './' + src_Path + '/preso/background.html',
       filename: 'preso/background.html'
-    }),        
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './' + src_Path + '/preso/beliefs.html',
+      filename: 'preso/beliefs.html'
+    }),
 
     new WebpackMd5Hash()
   ]

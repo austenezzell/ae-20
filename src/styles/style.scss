@@ -184,6 +184,10 @@ a.portfolio-section {
   .grid-item {
     background-position: center;
     background-size: cover;
+    img, video {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 

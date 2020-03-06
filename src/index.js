@@ -7,6 +7,8 @@ const introEl = document.querySelector('.oh-hey');
 let workPage = document.querySelector('.work-page');
 let presoPage = document.querySelector('.preso-page');
 let backgroundPage = document.querySelector('.background-page');
+let presoHome = document.getElementById('preso-home');
+
 let job = document.querySelectorAll('.job');
 let jobEvents = [];
 let currentSlideCount = [];
@@ -16,7 +18,9 @@ let projects = document.querySelectorAll('.projects');
 let secondaryNav = document.querySelectorAll('.secondary-nav');
 let closeSecondaryNav = document.querySelector('.close-secondary-nav');
 let date = document.querySelector('.date');
-var d = new Date();
+let d = new Date();
+let beard1 = document.getElementById('beardseason1');
+let beard2 = document.getElementById('beardseason2');
 
 // HOMEPAGE
 import mags from '../src/img/mags.png';
@@ -99,6 +103,16 @@ import quik3 from "../src/img/quik3.png";
 import bg1 from "../src/img/bg1.jpg";
 import bg2 from "../src/img/bg2.jpg";
 import bg3 from "../src/img/bg3.jpg";
+
+import banjo1 from "../src/img/banjo1.jpg";
+import banjo2 from "../src/img/banjo2.jpg";
+import banjo3 from "../src/img/banjo3.jpg";
+import banjo4 from "../src/img/banjo4.jpg";
+import banjo5 from "../src/img/banjo5.mp4";
+import banjo6 from "../src/img/banjo6.mp4";
+import banjo7 from "../src/img/banjo7.jpg";
+import banjo8 from "../src/img/banjo8.jpg";
+import banjo9 from "../src/img/banjo9.jpg";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -255,27 +269,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-
+  if (presoHome) {
+    setTimeout(function() {
+      introEl.style.display = 'none';
+    }, 3000);
+  }
 
   if (presoPage || backgroundPage) {
-    // setTimeout(function() {
-    //   introEl.style.display = 'none';
-    // }, 3000);
-
     date.innerHTML = d.getFullYear();
-
-    projects[0].addEventListener('click', e => {
-      e.preventDefault();
-      if (! secondaryNav[0].classList.contains('active')) {
-        secondaryNav[0].classList.add('active');
-      }
-    });
+    for (var i = 0; i < projects.length; i++) {
+      projects[i].addEventListener('click', e => {
+        e.preventDefault();
+        if (! secondaryNav[0].classList.contains('active')) {
+          secondaryNav[0].classList.add('active');
+        }
+      });
+    };
     closeSecondaryNav.addEventListener('click', e => {
       secondaryNav[0].classList.remove('active');
     });
-
-
-
   }
 
 
@@ -285,6 +297,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   if (backgroundPage) {
+
+    beard1.setAttribute('src', '../' + banjo5);
+    beard2.setAttribute('src', '../' + banjo6);
+
     for (var i = 0; i < job.length; i++) {
 
       slideCount = job[i].querySelectorAll('.grid-item');
@@ -299,6 +315,9 @@ document.addEventListener("DOMContentLoaded", () => {
              jobEvents[currentSlide][
                currentSlideCount[currentSlide]
              ].classList.add('active');
+             if (jobEvents[currentSlide][currentSlideCount[currentSlide]].getElementsByTagName('video').length) {
+               jobEvents[currentSlide][currentSlideCount[currentSlide]].getElementsByTagName('video')[0].play();
+             }
              currentSlideCount[currentSlide]++;
            } else {
              let i = jobEvents[currentSlide].length - 1;

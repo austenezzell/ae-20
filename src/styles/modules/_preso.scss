@@ -1,5 +1,43 @@
 // PRESO
 
+.preso-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+}
+.preso-main {
+  height: 100vh;
+  ul {
+    position: absolute;
+    top: $base-spacing * 8;
+    left: 30px;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin-bottom: $base-spacing;
+      a {
+        color: $dark-color;
+        text-decoration: none;
+        font-size: $font-regular;
+        @media all and (min-width: 600px) {
+          font-size: $font-medium;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.preso-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
 
 #preso-home {
   .primary-nav {
@@ -30,6 +68,9 @@
   a.active {
     text-decoration: underline;
   }
+  li {
+    margin-bottom: 5px;
+  }
 }
 .secondary-nav {
   display: none;
@@ -54,10 +95,11 @@
     }
   }
   ul {
-    margin: $base-spacing 0 0;
+    margin: $base-spacing *4 0 0;
     padding: 0;
     li {
       list-style: none;
+      margin-bottom: $base-spacing;
       a {
         display: block;
         color: $tan-color;
@@ -70,7 +112,7 @@
           text-decoration: underline;
         }
         @media all and (min-width: 600px) {
-          font-size: $font-large;
+          font-size: $font-medium;
         }
       }
     }
@@ -101,7 +143,7 @@
     h2 {
       margin: 0;
       position: relative;
-      top: 80px;
+      line-height: 98%;
     }
     @media all and (min-width: 600px) {
       font-size: $font-medium;
@@ -188,6 +230,39 @@
     background-position: center;
     background-size: cover;
     background: url('../img/quik3.png');
+  }
+}
+
+.banjo {
+  .grid-item-2 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/banjo1.jpg');
+  }
+  .grid-item-3 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/banjo2.jpg');
+  }
+  .grid-item-4 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/banjo3.jpg');
+  }
+  .grid-item-5 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/banjo4.jpg');
+  }
+  .grid-item-8 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/banjo7.jpg');
+  }
+  .grid-item-9 {
+    background-position: center;
+    background-size: cover;
+    background: url('../img/banjo9.jpg');
   }
 }
 

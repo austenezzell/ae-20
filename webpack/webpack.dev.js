@@ -136,6 +136,12 @@ module.exports = {
       hash: false,
       template: './' + src_Path + '/preso/background.html',
       filename: 'preso/background.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: false,
+      template: './' + src_Path + '/preso/beliefs.html',
+      filename: 'preso/beliefs.html'
     })
   ]
 };
